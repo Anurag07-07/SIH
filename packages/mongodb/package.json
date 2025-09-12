@@ -1,7 +1,7 @@
 {
   "name": "@repo/mongodb",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "db.js",
   "type": "module",
   "types": "db.d.ts",
   "exports": {

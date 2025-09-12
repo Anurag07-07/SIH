@@ -1,0 +1,26 @@
+{
+  "name": "@repo/postdb",
+  "version": "0.0.1",
+  "main": "pdb.js",
+  "type": "module",
+  "types": "pdb.d.ts",
+  "exports": {
+    "./postdb": "./dist/pdb.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "generate": "npx prisma generate",
+    "migrate:dev": "npx prisma migrate dev"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "prisma": "6.16.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@prisma/client": "6.16.1"
+  }
+}

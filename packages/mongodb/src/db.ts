@@ -1,15 +1,17 @@
-import mongoose from "mongoose";
-import dotenv from 'dotenv'
-dotenv.config({path:'/.env'})
-export const DBConnect = async()=>{
-  try {
-    console.log(process.env.MONGO_URI);
-    
-    await mongoose.connect(process.env.MONGO_URI as string)
-    console.log(`Mongo Database Connected`);
-  } catch (error) {
-    console.log("DB Not Connected");
-    console.error(error);
-    process.exit(1)
-  }
-} 
+import mongoose from 'mongoose';
+
+let isConnected = false;
+
+export async function dbConnect() {
+  if (isConnected) return;
+
+  const uri = process.env.DATABASE_URL;
+  console.log(uri);
+  
+  if (!uri) throw new Error(`DATABASE_URL not set ${uri}`);
+
+  await mongoose.connect(uri);
+  isConnected = true;
+
+  console.log('MongoDB connected');
+}

@@ -2,8 +2,13 @@ import { Request, Response } from "express";
 import {UserValidation} from '@repo/validation/validation'
 import {client} from '@repo/postdb/postdb'
 import bcrypt from 'bcrypt'
-const Signup = async(req:Request,res:Response)=>{
+export const Signup = async(req:Request,res:Response)=>{
   const Check = UserValidation.safeParse(req.body)
+
+  console.log(req
+    .body
+  );
+  
 
   if (!Check.success) {
     return res.status(403).json({

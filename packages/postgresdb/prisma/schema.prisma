@@ -19,4 +19,5 @@ model User{
   password String
   email String @unique
   Phone String  @unique
+  photo String?
 }

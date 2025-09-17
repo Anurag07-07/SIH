@@ -11,7 +11,8 @@
   },
   "devDependencies": {
     "@repo/postdb": "workspace:*",
-    "@repo/typescript-config": "workspace:*"
+    "@repo/typescript-config": "workspace:*",
+    "@repo/validation":"workspace:*"
   },
   "keywords": [],
   "author": "",

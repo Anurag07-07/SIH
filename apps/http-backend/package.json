@@ -12,7 +12,7 @@
   "devDependencies": {
     "@repo/postdb": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@repo/validation":"workspace:*"
+    "@repo/validation": "workspace:*"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +25,7 @@
     "@types/jsonwebtoken": "^9.0.10",
     "@types/mongoose": "^5.11.97",
     "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",

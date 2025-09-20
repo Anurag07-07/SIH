@@ -64,7 +64,8 @@ export const Signin = async(req:Request,res:Response)=>{
   const check = SigninValidation.safeParse(req.body)
   if (!check.success) {
     return res.status(403).json({
-      message:`Invalid Data`
+      message:`Invalid Data`,
+      error:check.error.message
     })
   }
 

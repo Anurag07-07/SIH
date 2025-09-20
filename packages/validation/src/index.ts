@@ -7,3 +7,8 @@ export const UserValidation = z.object({
   Phone:z.string().min(10).max(12),
   photo:z.string()
 })
+
+export  const SigninValidation = z.object({
+  username:z.string().min(5).max(20),
+  password:z.string().min(5).max(20)
+})

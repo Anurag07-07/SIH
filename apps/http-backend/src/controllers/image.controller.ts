@@ -47,14 +47,12 @@ export const ImageUpload = async (req: Request, res: Response) => {
         (exifData.tags.ModifyDate &&
           new Date(exifData.tags.ModifyDate * 1000)) ||
         null,
-
       camera: {
         make: exifData.tags.Make || null,
         model: exifData.tags.Model || null,
         lens: exifData.tags.LensModel || null,
         software: exifData.tags.Software || null,
       },
-
       gps: {
         latitude: exifData.tags.GPSLatitude || null,
         longitude: exifData.tags.GPSLongitude || null,
@@ -62,7 +60,6 @@ export const ImageUpload = async (req: Request, res: Response) => {
         timestamp: exifData.tags.GPSTimeStamp || null,
         date: exifData.tags.GPSDateStamp || null,
       },
-
       image: {
         orientation: exifData.tags.Orientation || null,
         width: exifData.imageSize?.width || null,
